@@ -145,3 +145,45 @@ a.navbar-brand:hover{
 	top:0px;
   }
 }
+
+.feature-heading{
+  font-weight:500;
+}
+
+.feature-preview{
+  width:100%;
+}
+
+.feature-description{
+  font-weight:200;
+  font-size:1.3em;
+}
+
+section{
+  margin-top:70px;
+}
+
+.text-align-right{
+  text-align: right;
+}
+
+#middle-feature-section{
+  position: relative;
+}
+
+#social-block{
+  background-image: linear-gradient(90deg, #F2295F 0%, #E4647E 91%);
+  width: 130px;
+  height: 380px;
+  position: absolute;
+  left: 0px;
+  top: 70px;
+}
+
+.social-logo{
+  display: block;
+  width:64px;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:80px;
+}
