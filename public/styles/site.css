@@ -5896,6 +5896,13 @@ a.navbar-brand:hover {
 .small-margin-top {
   margin-top: 10px; }
 
+.medium-margin-right {
+  margin-right: 30px; }
+
+.small-padding-left-right {
+  padding-left: 20px;
+  padding-right: 20px; }
+
 @media only screen and (max-width: 480px) {
   .active {
     background: #2a95a0; }
@@ -5958,3 +5965,75 @@ section {
   margin-left: auto;
   margin-right: auto;
   margin-top: 80px; }
+
+#about-us-section {
+  position: relative;
+  height: 500px; }
+
+#founder {
+  position: absolute;
+  right: 0px;
+  width: 50%;
+  height: 100%;
+  background-image: linear-gradient(-45deg, #6293A9 0%, #4B84A8 100%);
+  color: #f6f6f6;
+  font-weight: 200;
+  font-size: 1.2em;
+  padding: 140px; }
+
+#about-us-heading {
+  font-weight: 300;
+  position: absolute;
+  left: 20%;
+  top: 250px; }
+
+#founder-profile {
+  height: 150px; }
+
+.float-left {
+  float: left; }
+
+.action-button {
+  border: none;
+  color: white;
+  background-image: linear-gradient(135deg, #E93767 0%, #E8778E 100%);
+  font-size: 2.3em;
+  font-weight: lighter;
+  padding: 20px 40px 20px 40px;
+  text-align: center; }
+
+button.action-button {
+  border: none; }
+
+.action-button:hover {
+  background-image: linear-gradient(135deg, #ff396a 0%, #ff849c 100%); }
+
+.horizontal-line {
+  height: 2px;
+  position: relative;
+  top: 0.5em; }
+
+.right-intense {
+  background-image: linear-gradient(90deg, rgba(202, 202, 202, 0) 0%, #a3a3a3 100%); }
+
+.left-intense {
+  background-image: linear-gradient(90deg, #a3a3a3 0%, rgba(202, 202, 202, 0) 100%); }
+
+.medium-line-height {
+  line-height: 2.5em; }
+
+#free-trial-divider {
+  margin-top: 100px;
+  margin-bottom: 80px;
+  font-size: 2em;
+  font-weight: 100;
+  color: #919191; }
+
+.download-button {
+  width: 400px;
+  margin-top: 15px;
+  margin-bottom: 15px; }
+
+.no-padding-left-right {
+  padding-left: 0;
+  padding-right: 0; }
