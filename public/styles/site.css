@@ -5845,7 +5845,11 @@ body {
 #index-header-block {
   width: 100%;
   height: 700px;
-  position: relative; }
+  position: relative;
+  color: white; }
+
+#index-header-block h1, h2, h3, h4, h5, h6 {
+  font-weight: 200; }
 
 .bottom-right-slant {
   position: absolute;
@@ -5894,11 +5898,29 @@ a.navbar-brand:hover {
 
 @media only screen and (max-width: 480px) {
   .active {
-    background: #2a95a0; } }
+    background: #2a95a0; }
+  #header-preview {
+    width: 100%;
+    margin-top: 50px; } }
 
 @media only screen and (min-width: 480px) {
   .active {
-    border-bottom: 3px solid white; } }
+    border-bottom: 3px solid white; }
+  #header-preview {
+    height: 400px;
+    margin-top: 30px; } }
 
 .nav.navbar-nav li {
   margin-right: 25px; }
+
+#header-slogan {
+  position: relative;
+  animation: move-up-fade-in 1s linear 0s 1; }
+
+@keyframes move-up-fade-in {
+  0% {
+    opacity: 0;
+    top: 50px; }
+  100% {
+    opacity: 1;
+    top: 0px; } }

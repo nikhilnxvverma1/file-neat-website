@@ -38,6 +38,11 @@ body{
   width:100%;
   height:700px;
   position: relative;
+  color: $header-font-color;
+}
+
+#index-header-block h1,h2,h3,h4,h5,h6{
+  font-weight: 200;
 }
 
 .bottom-right-slant{
@@ -102,6 +107,10 @@ a.navbar-brand:hover{
   .active{
 	background: #2a95a0;
   }
+  #header-preview{
+	width:100%;
+	margin-top:50px;
+  }
 }
 
 //tablet and above
@@ -109,8 +118,30 @@ a.navbar-brand:hover{
   .active{
 	border-bottom: 3px solid $header-font-color;
   }
+  #header-preview{
+	height:400px;
+	margin-top:30px;
+  }
 }
 
 .nav.navbar-nav li{
   margin-right:25px;
+}
+
+#header-slogan{
+  position: relative;
+  animation:move-up-fade-in 1s linear 0s 1;
+}
+
+
+
+@keyframes move-up-fade-in {
+  0% {
+	opacity:0;
+	top:50px;
+  }
+  100%{
+	opacity:1;
+	top:0px;
+  }
 }
