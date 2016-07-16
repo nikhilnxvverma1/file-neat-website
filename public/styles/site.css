@@ -6037,3 +6037,33 @@ button.action-button {
 .no-padding-left-right {
   padding-left: 0;
   padding-right: 0; }
+
+footer {
+  margin-top: 30px;
+  background-image: linear-gradient(45deg, #43607F 0%, #203249 100%);
+  font-size: 26px;
+  color: white;
+  height: 300px;
+  width: 100%;
+  padding-left: 70px;
+  padding-top: 20px;
+  position: relative; }
+
+footer > ul {
+  list-style-type: none;
+  color: white; }
+
+footer > ul > li > a {
+  color: white;
+  font-weight: lighter;
+  font-size: 0.7em; }
+
+footer > ul > li > a:hover {
+  color: #f3f3f3; }
+
+#copyright {
+  position: absolute;
+  bottom: 20px;
+  left: 110px;
+  font-weight: lighter;
+  font-size: 0.5em; }
