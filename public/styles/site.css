@@ -6067,3 +6067,16 @@ footer > ul > li > a:hover {
   left: 110px;
   font-weight: lighter;
   font-size: 0.5em; }
+
+header.navbar {
+  background-image: linear-gradient(134deg, #28868F 0%, #2B4A75 100%);
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px; }
+
+.no-border-radius,
+.list-group-item:first-child.no-border-radius,
+.list-group-item:last-child.no-border-radius {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0; }
