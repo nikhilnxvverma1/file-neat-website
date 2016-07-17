@@ -6080,3 +6080,23 @@ header.navbar {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0; }
+
+.pagination .active > a {
+  background: #D8D8D8;
+  border: none; }
+
+.pagination > li:first-child > a,
+.pagination > li:last-child > a {
+  background: transparent;
+  border: none;
+  color: #3E3E3E; }
+
+.pagination > li:first-child > a:hover,
+.pagination > li:last-child > a:hover {
+  border-radius: 0;
+  background: transparent;
+  color: #337ab7; }
+
+.pagination > li > a,
+.pagination > .active > a {
+  color: #3E3E3E; }
