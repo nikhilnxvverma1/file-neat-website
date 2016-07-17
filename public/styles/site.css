@@ -6100,3 +6100,28 @@ header.navbar {
 .pagination > li > a,
 .pagination > .active > a {
   color: #3E3E3E; }
+
+#faq-container p {
+  font-size: 1.2em;
+  font-weight: 300; }
+
+#faq-container h2 {
+  font-weight: 300; }
+
+.flat-text {
+  border: none;
+  padding: 10px;
+  width: 400px;
+  margin-bottom: 20px; }
+
+textarea.flat-text {
+  width: 470px;
+  height: 250px; }
+
+.display-block {
+  display: block; }
+
+.action-button.small-button {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 1.5em; }
