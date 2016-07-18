@@ -6106,7 +6106,14 @@ header.navbar {
   font-weight: 300; }
 
 #faq-container h2 {
-  font-weight: 300; }
+  font-weight: 300;
+  margin-top: 45px; }
+
+#faq-container h3 {
+  margin-top: 15px; }
+
+#faq-container p {
+  margin-top: 18px; }
 
 .flat-text {
   border: none;

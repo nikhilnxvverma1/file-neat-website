@@ -5,8 +5,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/styles/site.css" afterPath="$PROJECT_DIR$/public/styles/site.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/styles/site.scss" afterPath="$PROJECT_DIR$/public/styles/site.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/views/partials/footer.hbs" afterPath="$PROJECT_DIR$/templates/views/partials/footer.hbs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/views/support.hbs" afterPath="$PROJECT_DIR$/templates/views/support.hbs" />
     </list>
     <ignored path="file-neat-website.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,8 +28,8 @@
       <file leaf-file-name="site.scss" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/styles/site.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33745584">
-              <caret line="373" column="16" selection-start-line="373" selection-start-column="16" selection-end-line="373" selection-end-column="16" />
+            <state vertical-scroll-proportion="0.6819788">
+              <caret line="379" column="0" selection-start-line="379" selection-start-column="0" selection-end-line="379" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -432,7 +430,13 @@
       <option name="project" value="LOCAL" />
       <updated>1468749006166</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="FAQs and contact form implemented without affix">
+      <created>1468779967522</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1468779967522</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView">
@@ -490,7 +494,8 @@
     <MESSAGE value="Footer partial completed and integrated" />
     <MESSAGE value="Created and integrated header and completed blog and post page." />
     <MESSAGE value="Blog page finished with stylized pagination controls" />
-    <option name="LAST_COMMIT_MESSAGE" value="Blog page finished with stylized pagination controls" />
+    <MESSAGE value="FAQs and contact form implemented without affix" />
+    <option name="LAST_COMMIT_MESSAGE" value="FAQs and contact form implemented without affix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -716,8 +721,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/styles/site.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33745584">
-          <caret line="373" column="16" selection-start-line="373" selection-start-column="16" selection-end-line="373" selection-end-column="16" />
+        <state vertical-scroll-proportion="0.6819788">
+          <caret line="379" column="0" selection-start-line="379" selection-start-column="0" selection-end-line="379" selection-end-column="0" />
           <folding />
         </state>
       </provider>
