@@ -34,18 +34,23 @@ plan.target('production', [
 
 // run commands on localhost
 plan.local(function(local) {
+	local.log('Local start :'+new Date().toString());
+	local.log('Copy files to remote hosts');
 	// uncomment these if you need to run a build on your machine first
 	// local.log('Run build');
 	// local.exec('gulp build');
-
-	local.log('Copy files to remote hosts');
 	var filesToCopy = local.exec('git ls-files', {silent: true});
+	//var filesToCopy = local.exec('find . -type f | sed \'s/^..//\'', {silent: false});
+	//local.log("Files to copy length:"+filesToCopy.length);
+	
 	// rsync files to all the destination's hosts
 	local.transfer(filesToCopy, '/tmp/' + tmpDir);
+	local.log('Local end: '+new Date().toString());
 });
 
 // run commands on remote hosts (destinations)
 plan.remote(function(remote) {
+	remote.log('Remote start :'+new Date().toString());
 	remote.log('Deleting last codebase from users home directory');
 	remote.rm('-rf ~/' + tmpDir);
 	remote.log('Move folder to root');
@@ -55,13 +60,19 @@ plan.remote(function(remote) {
 	remote.log('Install dependencies');
 	remote.sudo('npm --production --prefix ~/' + tmpDir + ' install ~/' + tmpDir, {user: username});
 
+	remote.log("Copy dependencies from working copy");
+	remote.rm('-R ~/'+tmpDir+'/node_modules');
+	remote.cp('-R ~/working-dev-copy-fine/node_modules/ ~/'+tmpDir+'/')
+	
 	remote.log('Reload application');
 	remote.sudo('ln -snf ~/' + tmpDir + ' ~/'+appName, {user: username});//symlink
 	remote.exec('pm2 stop '+appName, {failsafe: true});
 	remote.with('cd ~/'+tmpDir, function() {
 		remote.exec('pm2 start keystone.js'+' --name='+appName);
 	});
+	remote.log('Remote end :'+new Date().toString());
 	// remote.exec('cd ~/'+tmpDir);
 	// remote.exec('pm2 start keystone.js'+' --name='+appName);
 	// remote.exec('cd ~');//go back to home directory
+	
 });
