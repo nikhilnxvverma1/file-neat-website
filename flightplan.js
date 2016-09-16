@@ -57,19 +57,25 @@ plan.remote(function(remote) {
 	remote.sudo('cp -R /tmp/' + tmpDir + ' ~', {user: username});
 	remote.rm('-rf /tmp/' + tmpDir);
 
-	remote.log('Install dependencies');
-	remote.sudo('npm --production --prefix ~/' + tmpDir + ' install ~/' + tmpDir, {user: username});
+	//we are manually copying depenedencies from a known dev copy on server
+	//remote.log('Install dependencies');
+	//remote.sudo('npm --production --prefix ~/' + tmpDir + ' install ~/' + tmpDir, {user: username});
 
-	remote.log("Copy dependencies from working copy");
-	remote.rm('-R ~/'+tmpDir+'/node_modules');
-	remote.cp('-R ~/working-dev-copy-fine/node_modules/ ~/'+tmpDir+'/')
+	remote.log("Copying dependencies from working copy");
+	//remote.rm('-R ~/'+tmpDir+'/node_modules');
+	remote.cp('-R ~/working-dev-copy-fine/node_modules/ ~/'+tmpDir+'/');
 	
 	remote.log('Reload application');
-	remote.sudo('ln -snf ~/' + tmpDir + ' ~/'+appName, {user: username});//symlink
+	//remote.sudo('ln -snf ~/' + tmpDir + ' ~/'+appName, {user: username});//symlink
 	remote.exec('pm2 stop '+appName, {failsafe: true});
+	
 	remote.with('cd ~/'+tmpDir, function() {
 		remote.exec('pm2 start keystone.js'+' --name='+appName);
 	});
+
+	//remote.exec('cd ~/'+tmpDir);
+	//remote.exec('pm2 start keystone.js'+' --name='+appName);
+	
 	remote.log('Remote end :'+new Date().toString());
 	// remote.exec('cd ~/'+tmpDir);
 	// remote.exec('pm2 start keystone.js'+' --name='+appName);
