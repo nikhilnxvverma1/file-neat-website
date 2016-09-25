@@ -3,7 +3,7 @@ var _ = require('underscore');
 var hbs = require('handlebars');
 var keystone = require('keystone');
 var cloudinary = require('cloudinary');
-
+var i18n=require('i18n');
 
 // Declare Constants
 var CLOUDINARY_HOST = 'http://res.cloudinary.com';
@@ -347,6 +347,21 @@ module.exports = function() {
 	
 	_helpers.underscoreFormat = function (obj, underscoreMethod) {
 		return obj._[underscoreMethod].format();
+	}
+
+	//i18n internationalization
+	//register hbs helpers in res.locals' context which provides this.locale
+	//Usage
+	//{{__ "key"}}
+	_helpers.__ = function () {
+		return i18n.__.apply(this, arguments);
+	}
+	
+	//i18n internationalization
+	//Usage
+	//{{__n "key 3"}}
+	_helpers.__n = function () {
+		return i18n.__n.apply(this, arguments);
 	}
 	
 	return _helpers;

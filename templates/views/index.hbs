@@ -11,7 +11,7 @@
                 </button>
                 <a href="/" class="navbar-brand header-font">
 					<img class="inline" src="images/logo.svg"/>
-					<div class="inline logo-text">File Neat</div>
+					<div class="inline logo-text">{{__ "title"}}</div>
 				</a>
             </div>
             <div class="collapse navbar-collapse">
@@ -22,16 +22,16 @@
                         </li>
 					{{/each}}
 					{{#if user}}
-                        <li><a class="navbar-font" href="/keystone/signout">Sign Out</a></li>
+                        <li><a class="navbar-font" href="/keystone/signout">{{__ "signOut"}}</a></li>
 					{{else}}
-                        <li><a class="navbar-font" href="/keystone/signin">Sign In</a></li>
+                        <li><a class="navbar-font" href="/keystone/signin">{{__ "signIn"}}</a></li>
 					{{/if}}
                 </ul>
             </div>
         </div>
     </div>
 	<div class="text-center">
-		<h2 id="header-slogan" >Saving Disk Space Made Simple</h2>
+		<h2 id="header-slogan" >{{__ "headerSlogan"}}</h2>
 		<img id="header-preview" src="images/real-gif-soon.svg">
 	</div>
 </div>
@@ -40,14 +40,14 @@
 <section>
 	<div class="container">
 		<div class="row">
-			<h3 class="col-sm-12 col-md-offset-2 col-md-6 feature-heading">Scan Files and Folders</h3>
+			<h3 class="col-sm-12 col-md-offset-2 col-md-6 feature-heading">{{__ "scanTitle"}}</h3>
 		</div>
 		<div class="row">
 			<div class="col-sm-12 col-md-offset-2 col-md-6">
                 <img class="feature-preview" src="images/real-gif-soon.svg">
 			</div>
 			<div class="col-sm-12 col-md-3 feature-description">
-                Lorem ipsum dolor sit amet, quo ei laudem sanctus, vim at odio quas integre, populo senserit ad cum. Qui tota veri diceret ut, putent antiopam an duo.
+                {{__ "scanDescription"}}
 			</div>
 		</div>
 	</div>
@@ -65,11 +65,11 @@
 	</div>
     <div class="container">
         <div class="row">
-            <h3 class="col-sm-12 col-md-offset-5 col-md-6 feature-heading">Check Your Usage</h3>
+            <h3 class="col-sm-12 col-md-offset-5 col-md-6 feature-heading">{{__ "usageTitle"}}</h3>
         </div>
         <div class="row">
             <div class="col-sm-12 col-md-offset-2 col-md-3 feature-description text-align-right">
-                Lorem ipsum dolor sit amet, quo ei laudem sanctus, vim at odio quas integre, populo senserit ad cum. Qui tota veri diceret ut, putent antiopam an duo.
+                {{__ "usageDescription"}}
             </div>
             <div class="col-sm-12 col-md-6">
                 <img class="feature-preview" src="images/real-gif-soon.svg">
@@ -83,14 +83,14 @@
 <section>
     <div class="container">
         <div class="row">
-            <h3 class="col-sm-12 col-md-offset-2 col-md-6 feature-heading">Organize and Declutter</h3>
+            <h3 class="col-sm-12 col-md-offset-2 col-md-6 feature-heading">{{__ "organizeTitle"}}</h3>
         </div>
         <div class="row">
             <div class="col-sm-12 col-md-offset-2 col-md-6">
                 <img class="feature-preview" src="images/real-gif-soon.svg">
             </div>
             <div class="col-sm-12 col-md-3 feature-description">
-                Lorem ipsum dolor sit amet, quo ei laudem sanctus, vim at odio quas integre, populo senserit ad cum. Qui tota veri diceret ut, putent antiopam an duo.
+                {{__ "organizeDescription"}}
             </div>
         </div>
     </div>
@@ -98,7 +98,7 @@
 
 <!--About us-->
 <section id="about-us-section">
-	<h1 id="about-us-heading">About Us</h1>
+	<h1 id="about-us-heading">{{__ "aboutUs"}}</h1>
 	<div id="founder" class="container">
 		<div id="founder-profile">
 			<img class="float-left medium-margin-right" src="images/mugshot-soon.svg"/>
@@ -120,26 +120,44 @@
 		<div id="free-trial-divider" class="text-center row">
 			<div class="right-intense horizontal-line col-sm-offset-1 col-sm-3"></div>
 			<!--<hr/>-->
-			<div class="col-sm-4 no-padding-left-right">or download free trial</div>
+			<div class="col-sm-4 no-padding-left-right">{{__ "separatorTextBeforeDownload"}}</div>
 			<div class="left-intense horizontal-line col-sm-3"></div>
 		</div>
 
         <div class="text-center">
-            <button class="action-button download-button">
-                Download (Mac)
+            <button class="action-button download-button" data-toggle="modal" data-target="#myModal">
+                {{__ "downloadMac"}}
             </button>
         </div>
 
         <div class="text-center">
-            <button  class="action-button download-button">
-                Download (Windows)
+            <button  class="action-button download-button" data-toggle="modal" data-target="#myModal">
+                {{__ "downloadWindows"}}
             </button>
         </div>
 
         <div class="text-center">
-            <button  class="action-button download-button">
-                Download (Linux)
+            <button  class="action-button download-button" data-toggle="modal" data-target="#myModal">
+                {{__ "downloadLinux"}}
             </button>
         </div>
     </div>
 </section>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">{{__ "comingSoonModalTitle"}}</h4>
+      </div>
+      <div class="modal-body">
+        {{__ "comingSoonModalDescription"}}
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>        
+      </div>
+    </div>
+  </div>
+</div>
