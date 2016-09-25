@@ -68,13 +68,12 @@
             <h3 class="col-sm-12 col-md-offset-5 col-md-6 feature-heading">{{__ "usageTitle"}}</h3>
         </div>
         <div class="row">
-            <div class="col-sm-12 col-md-offset-2 col-md-3 feature-description text-align-right">
-                {{__ "usageDescription"}}
-            </div>
-            <div class="col-sm-12 col-md-6">
+            <div class="col-sm-12 col-md-6 col-md-push-5 col-md-push-5">
                 <img class="feature-preview" src="images/real-gif-soon.svg">
             </div>
-            
+            <div class="col-sm-12 col-md-offset-2 col-md-3 col-md-pull-6 feature-description right-align-except-on-small">
+                {{__ "usageDescription"}}
+            </div>            
         </div>
     </div>
 </section>
@@ -98,8 +97,9 @@
 
 <!--About us-->
 <section id="about-us-section">
-	<h1 id="about-us-heading">{{__ "aboutUs"}}</h1>
+	<h1 id="about-us-heading" class="hidden-sm hidden-xs">{{__ "aboutUs"}}</h1>
 	<div id="founder" class="container">
+        <h2 class="visible-sm visible-xs">About Us</h2>
 		<div id="founder-profile">
 			<img class="float-left medium-margin-right" src="images/mugshot-soon.svg"/>
 			<div class="inline">Ut zril deserunt eam, dolore verterem in sit. Vel no possit splendide consequuntur.</div>
@@ -144,7 +144,7 @@
     </div>
 </section>
 
-<!-- Modal -->
+<!--Coming Soon Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">

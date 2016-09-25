@@ -212,8 +212,8 @@ $about-us-height:500px;
   color: #f6f6f6;
   font-weight:200;
   font-size:1.2em;
-  //padding:100px 100px 100px 100px;
-  padding:140px;
+  padding:100px 140px 100px 140px;
+  // padding:140px;
 }
 
 #about-us-heading{
@@ -399,3 +399,41 @@ textarea.flat-text{
   padding-bottom: 5px;
   font-size: 1.5em;
 }
+
+.right-align-except-on-small{
+  text-align: right;
+}
+
+/* Small devices (tablets, 768px and up) */
+$screen-sm-min: 768px;
+$screen-md-min: 992px;
+$screen-sm-max: ($screen-md-min - 1);
+@media (max-width: $screen-sm-max) { 
+    .right-align-except-on-small{
+      text-align: left;
+    }
+    
+ }
+
+//below medium (include small and extra small) 
+ @media (max-width:$screen-md-min){
+   #founder{
+      width:100%; 
+      // padding-left:20px;
+      // padding-right:20px;
+      padding-top: 60px;
+      padding-bottom: 60px;
+      h2{
+        margin-bottom: 50px;
+      }
+   }
+
+ }
+
+//for extra small devices only
+ @media (max-width:$screen-sm-min){
+   #founder{
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+ }

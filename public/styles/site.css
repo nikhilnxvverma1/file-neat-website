@@ -5979,7 +5979,7 @@ section {
   color: #f6f6f6;
   font-weight: 200;
   font-size: 1.2em;
-  padding: 140px; }
+  padding: 100px 140px 100px 140px; }
 
 #about-us-heading {
   font-weight: 300;
@@ -6132,3 +6132,24 @@ textarea.flat-text {
   padding-top: 5px;
   padding-bottom: 5px;
   font-size: 1.5em; }
+
+.right-align-except-on-small {
+  text-align: right; }
+
+/* Small devices (tablets, 768px and up) */
+@media (max-width: 991px) {
+  .right-align-except-on-small {
+    text-align: left; } }
+
+@media (max-width: 992px) {
+  #founder {
+    width: 100%;
+    padding-top: 60px;
+    padding-bottom: 60px; }
+    #founder h2 {
+      margin-bottom: 50px; } }
+
+@media (max-width: 768px) {
+  #founder {
+    padding-left: 30px;
+    padding-right: 30px; } }
