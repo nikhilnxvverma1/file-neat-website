@@ -5990,6 +5990,19 @@ section {
 #founder-profile {
   height: 150px; }
 
+#founder-profile img {
+  width: 112px;
+  height: 112px;
+  border-radius: 50%; }
+
+.bold-bright {
+  font-weight: bold;
+  color: white; }
+
+.bold-bright:focus, .bold-bright:hover {
+  font-weight: bold;
+  color: #E93767; }
+
 .float-left {
   float: left; }
 
@@ -6145,7 +6158,10 @@ textarea.flat-text {
 /* Small devices (tablets, 768px and up) */
 @media (max-width: 991px) {
   .right-align-except-on-small {
-    text-align: left; } }
+    text-align: left; }
+  #founder-profile div {
+    position: relative;
+    top: 30px; } }
 
 @media (max-width: 992px) {
   #founder {
@@ -6158,4 +6174,18 @@ textarea.flat-text {
 @media (max-width: 768px) {
   #founder {
     padding-left: 30px;
-    padding-right: 30px; } }
+    padding-right: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px; }
+    #founder h2 {
+      margin-bottom: 20px; }
+    #founder #founder-profile {
+      margin-bottom: 20px; }
+    #founder #founder-profile div {
+      position: relative;
+      top: 5px; } }
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  #founder {
+    padding-left: 70px;
+    padding-right: 70px; } }

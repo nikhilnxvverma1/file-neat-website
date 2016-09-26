@@ -23,5 +23,7 @@
 	"comingSoonModalTitle": "Coming Soon...",
 	"comingSoonModalDescription": "File Neat is still in Closed Alpha. We will be releasing a Public Beta soon. Until then, watch this space.",
 	"developmentDescription": "File Neat was made using Angular 2 and D3.js. If you like using it, make sure to rate us on github ",
-	"here":"here"
+	"here": "here",
+	"myDescription": "Hi, My name is Nikhil Verma. I am a programmer and designer(kinda) who likes working on cool new projects. You can learn more about me ",
+	"whyMadeFine": "As any SSD based laptop owner would know, managing disk space can be a real pain in the ass. My 128GB Macbook Air gets filled up in no time. I created File Neat (a.k.a FI.NE) as a means to resolve that frustration and hopefully give the users a better experience next time they go decluttering their file system."
 }

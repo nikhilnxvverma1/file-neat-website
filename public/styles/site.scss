@@ -227,6 +227,22 @@ $about-us-height:500px;
   height:150px;
 }
 
+#founder-profile img{
+  width:112px;
+  height:112px;
+  border-radius: 50%;
+}
+
+.bold-bright{
+  font-weight: bold;
+  color:white;
+}
+
+.bold-bright:focus,.bold-bright:hover{
+  font-weight: bold;
+  color:#E93767;
+}
+
 .float-left{
   float:left;
 }
@@ -418,10 +434,17 @@ $facebook-color: #3B5998;
 /* Small devices (tablets, 768px and up) */
 $screen-sm-min: 768px;
 $screen-md-min: 992px;
+$screen-lg-max: 1200px;
+$screen-md-max: ($screen-lg-max - 1); 
 $screen-sm-max: ($screen-md-min - 1);
+
 @media (max-width: $screen-sm-max) { 
     .right-align-except-on-small{
       text-align: left;
+    }
+    #founder-profile div{
+      position:relative;
+      top:30px;
     }
     
  }
@@ -433,7 +456,7 @@ $screen-sm-max: ($screen-md-min - 1);
       // padding-left:20px;
       // padding-right:20px;
       padding-top: 60px;
-      padding-bottom: 60px;
+      padding-bottom: 60px;      
       h2{
         margin-bottom: 50px;
       }
@@ -445,6 +468,27 @@ $screen-sm-max: ($screen-md-min - 1);
  @media (max-width:$screen-sm-min){
    #founder{
       padding-left: 30px;
-      padding-right: 30px;
+      padding-right: 30px;      
+      padding-top:30px;
+      padding-bottom:30px;
+    
+      h2{
+        margin-bottom: 20px;
+      }
+      #founder-profile{
+        margin-bottom:20px;
+      }
+      #founder-profile div{
+        position:relative;
+        top:5px;
+      }
     }
+ }
+
+//medium devices only
+ @media(min-width:$screen-sm-min) and (max-width:$screen-md-max){
+   #founder{
+     padding-left:70px;
+     padding-right:70px;
+   }
  }
