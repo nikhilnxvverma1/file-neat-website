@@ -1,6 +1,8 @@
 {{!< body-footer}}
 
+
 <script>
+
     $(document).ready(function(){
         $('#social-block').waypoint(function(){            
             $('#social-block').addClass('fadeInLeft');
@@ -46,6 +48,9 @@
 
         $('#founder').waypoint(function(){        
             $('#founder h2').addClass('fadeInUp');
+            $('#founder-profile img').addClass('zoomIn');
+            $('#founder-profile div').addClass('fadeInUp');
+            $('#founder:last-child').addClass('fadeInUp');
         },{offset:'100%'});
     });
 
@@ -172,10 +177,10 @@
 	<div id="founder" class="container">
         <h2 class="visible-sm visible-xs animated">About Us</h2>
 		<div id="founder-profile">
-			<img class="float-left medium-margin-right" src="images/mugshot-soon.svg"/>
-			<div class="inline">Ut zril deserunt eam, dolore verterem in sit. Vel no possit splendide consequuntur.</div>
+			<img class="float-left medium-margin-right animated" src="images/mugshot-soon.svg"/>
+			<div class="inline animated">Ut zril deserunt eam, dolore verterem in sit. Vel no possit splendide consequuntur.</div>
 		</div>
-		<div>Id eam paulo gubergren. Ei commodo phaedrum vis, veri propriae constituto at qui. Ius eu hinc eros doming, est ei vivendum singulis incorrupte, maluisset accusamus te qui.</div>
+		<div class="animated">Id eam paulo gubergren. Ei commodo phaedrum vis, veri propriae constituto at qui. Ius eu hinc eros doming, est ei vivendum singulis incorrupte, maluisset accusamus te qui.</div>
 	</div>
 </section>
 
