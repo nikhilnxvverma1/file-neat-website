@@ -21,5 +21,7 @@
 	"organizeTitle": "Organize and Declutter",
 	"organizeDescription": "FI.NE goes one step further and provides a complete file browser to organise your folder structure. Usual operations like Rename, Group, Move and Delete are right within the app itself. This sets you free from needing to rescan your file system after every operation.",
 	"comingSoonModalTitle": "Coming Soon...",
-	"comingSoonModalDescription": "File Neat is still in Closed Alpha. We will be releasing a Public Beta soon. Until then, watch this space."
+	"comingSoonModalDescription": "File Neat is still in Closed Alpha. We will be releasing a Public Beta soon. Until then, watch this space.",
+	"developmentDescription": "File Neat was made using Angular 2 and D3.js. If you like using it, make sure to rate us on github ",
+	"here":"here"
 }

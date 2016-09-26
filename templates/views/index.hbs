@@ -1,11 +1,33 @@
 {{!< body-footer}}
 
+<script>
+    $(document).ready(function(){
+        
+    });
+
+    function navbarToggle(){
+        var navbarWasOpen=$('#open-navbar-menu-content').attr('aria-expanded');
+        if(navbarWasOpen=='true'){
+            console.log("navbar will close");
+            $('#index-header-block').animate({
+                height:"700px"
+            },400);
+        }else{
+            console.log("navbar will open");
+            $('#index-header-block').animate({
+                height:"900px"
+            },400);
+        }
+    }
+</script>
+
 <div id="index-header-block" class="header-gradient">
     <div class="bottom-right-slant"></div>
     <div role="navigation" class="navbar">
         <div class="container-fluid">
             <div class="navbar-header">
-                <button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle">
+                <button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle"
+                onclick="navbarToggle()">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar header-font"></span><span class="icon-bar"></span><span class="icon-bar"></span>
                 </button>
@@ -14,7 +36,7 @@
 					<div class="inline logo-text">{{__ "title"}}</div>
 				</a>
             </div>
-            <div class="collapse navbar-collapse">
+            <div id="open-navbar-menu-content" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right small-margin-top">
 					{{# each navLinks}}
                         <li {{#ifeq ../section key}}class="active"{{else}}{{/ifeq}}>
@@ -32,7 +54,7 @@
     </div>
 	<div class="text-center">
 		<h2 id="header-slogan" >{{__ "headerSlogan"}}</h2>
-		<img id="header-preview" src="images/real-gif-soon.svg">
+		<img id="header-preview" src="http://res.cloudinary.com/madebynikhil/image/upload/v1473352764/fine-preview_x5dsxh.gif">
 	</div>
 </div>
 
@@ -44,7 +66,7 @@
 		</div>
 		<div class="row">
 			<div class="col-sm-12 col-md-offset-2 col-md-6">
-                <img class="feature-preview" src="images/real-gif-soon.svg">
+                <img class="feature-preview" src="http://res.cloudinary.com/madebynikhil/image/upload/v1474842369/fine-scan_gnwt7w.png">
 			</div>
 			<div class="col-sm-12 col-md-3 feature-description">
                 {{__ "scanDescription"}}
@@ -57,10 +79,14 @@
 <section id="middle-feature-section">
 	<div id="social-block" class="visible-lg-block">
 		<a href="#">
-			<img class="social-logo" src="images/facebook-logo.svg"/>
+            <img class="social-logo" src="images/facebook-logo.svg"/>
+			<!--<img class="social-logo" src="images/facebook-official-logo.png"/>-->
+            {{!>facebook-logo width=64 height=64}}
 		</a>
         <a href="#">
             <img class="social-logo" src="images/twitter-logo.svg"/>
+            <!--<img class="social-logo" src="images/twitter-official-logo.png"/>-->
+            {{!>twitter-logo width=64 height=64}}
         </a>
 	</div>
     <div class="container">
@@ -69,7 +95,7 @@
         </div>
         <div class="row">
             <div class="col-sm-12 col-md-6 col-md-push-5 col-md-push-5">
-                <img class="feature-preview" src="images/real-gif-soon.svg">
+                <img class="feature-preview" src="http://res.cloudinary.com/madebynikhil/image/upload/v1474842369/fine-sunburst_cvvjdj.png">
             </div>
             <div class="col-sm-12 col-md-offset-2 col-md-3 col-md-pull-6 feature-description right-align-except-on-small">
                 {{__ "usageDescription"}}
@@ -86,7 +112,7 @@
         </div>
         <div class="row">
             <div class="col-sm-12 col-md-offset-2 col-md-6">
-                <img class="feature-preview" src="images/real-gif-soon.svg">
+                <img class="feature-preview" src="http://res.cloudinary.com/madebynikhil/image/upload/v1474842369/fine-organise_lhwmzq.png">
             </div>
             <div class="col-sm-12 col-md-3 feature-description">
                 {{__ "organizeDescription"}}
@@ -96,7 +122,7 @@
 </section>
 
 <!--About us-->
-<section id="about-us-section">
+<section id="about">
 	<h1 id="about-us-heading" class="hidden-sm hidden-xs">{{__ "aboutUs"}}</h1>
 	<div id="founder" class="container">
         <h2 class="visible-sm visible-xs">About Us</h2>
@@ -108,20 +134,19 @@
 	</div>
 </section>
 
-<!--Buy or download-->
+<!--Download-->
 <section>
 	<div class="container text-center">
-		<div>
-            <button class="action-button">
-                Buy $6.99
-            </button>	
+		<div class="row">
+            <h4>
+                {{__ "developmentDescription"}} <a href="https://github.com/nikhilnxvverma1/fine"><strong>{{__ "here"}}</strong></a>
+            <h4>	
 		</div>
 		
-		<div id="free-trial-divider" class="text-center row">
-			<div class="right-intense horizontal-line col-sm-offset-1 col-sm-3"></div>
-			<!--<hr/>-->
-			<div class="col-sm-4 no-padding-left-right">{{__ "separatorTextBeforeDownload"}}</div>
-			<div class="left-intense horizontal-line col-sm-3"></div>
+		<div id="free-trial-divider" class="row text-center">
+			<div class="col-xs-offset-1 col-xs-3 col-md-offset-1 col-md-3 right-intense horizontal-line"></div>			
+			<div class="col-xs-4 no-padding-left-right">{{__ "separatorTextBeforeDownload"}}</div>
+			<div class="col-xs-4 col-md-3 left-intense horizontal-line "></div>
 		</div>
 
         <div class="text-center">

@@ -198,7 +198,7 @@ section{
 
 $about-us-height:500px;
 
-#about-us-section{
+#about{
   position: relative;
   height:$about-us-height;
 }
@@ -252,7 +252,7 @@ button.action-button{
 .horizontal-line{
   height:2px;
   position: relative;
-  top:0.5em;
+  top:0.7em;
 }
 
 .right-intense{
@@ -404,6 +404,17 @@ textarea.flat-text{
   text-align: right;
 }
 
+$twitter-color: #1DA1F3;
+$facebook-color: #3B5998;
+
+#twitter-logo:hover{
+  fill:$twitter-color;
+}
+
+#facebook-logo:hover{
+  fill:$facebook-color;
+}
+
 /* Small devices (tablets, 768px and up) */
 $screen-sm-min: 768px;
 $screen-md-min: 992px;
@@ -426,7 +437,7 @@ $screen-sm-max: ($screen-md-min - 1);
       h2{
         margin-bottom: 50px;
       }
-   }
+   }   
 
  }
 

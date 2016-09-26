@@ -5966,7 +5966,7 @@ section {
   margin-right: auto;
   margin-top: 80px; }
 
-#about-us-section {
+#about {
   position: relative;
   height: 500px; }
 
@@ -6011,7 +6011,7 @@ button.action-button {
 .horizontal-line {
   height: 2px;
   position: relative;
-  top: 0.5em; }
+  top: 0.7em; }
 
 .right-intense {
   background-image: linear-gradient(90deg, rgba(202, 202, 202, 0) 0%, #a3a3a3 100%); }
@@ -6135,6 +6135,12 @@ textarea.flat-text {
 
 .right-align-except-on-small {
   text-align: right; }
+
+#twitter-logo:hover {
+  fill: #1DA1F3; }
+
+#facebook-logo:hover {
+  fill: #3B5998; }
 
 /* Small devices (tablets, 768px and up) */
 @media (max-width: 991px) {
