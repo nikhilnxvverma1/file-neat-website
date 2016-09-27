@@ -94,11 +94,11 @@
                             <a class="navbar-font" href="{{ href }}">{{ label }}</a>
                         </li>
 					{{/each}}
-					{{#if user}}
-                        <li><a class="navbar-font" href="/keystone/signout">{{__ "signOut"}}</a></li>
-					{{else}}
-                        <li><a class="navbar-font" href="/keystone/signin">{{__ "signIn"}}</a></li>
-					{{/if}}
+					{{!#if user}}
+                        <!--<li><a class="navbar-font" href="/keystone/signout">Sign Out</a></li>-->
+                    {{!else}}
+                        <!--<li><a class="navbar-font" href="/keystone/signin">Sign In</a></li>-->
+                    {{!/if}}
                 </ul>
             </div>
         </div>
