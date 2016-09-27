@@ -1,5 +1,10 @@
 var plan = require('flightplan');
 
+// Simulate config options from your production environment by
+// customising the .env file in your project's root folder.
+// These variables will be set as environment variables on the production server 
+require('dotenv').load();
+
 var appName = 'file-neat-website';
 var username = 'deploy';
 // var startFile = 'bin/www';
@@ -68,8 +73,12 @@ plan.remote(function(remote) {
 	remote.log('Reload application');
 	//remote.sudo('ln -snf ~/' + tmpDir + ' ~/'+appName, {user: username});//symlink
 	remote.exec('pm2 stop '+appName, {failsafe: true});
+	remote.exec('export COOKIE_SECRET='+process.env.COOKIE_SECRET);
+	remote.exec('export CLOUDINARY_URL='+process.env.CLOUDINARY_URL);
+	remote.exec('export MANDRILL_API_KEY='+process.env.MANDRILL_API_KEY);
 	
 	remote.with('cd ~/'+tmpDir, function() {
+		remote.exec('npm install');//any additional dependencies can be added here
 		remote.exec('pm2 start keystone.js'+' --name='+appName);
 	});
 

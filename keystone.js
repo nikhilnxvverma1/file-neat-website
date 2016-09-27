@@ -12,7 +12,7 @@ var i18n=require('i18n');
 // and documentation.
 
 keystone.init({
-
+	'env':'production',
 	'name': 'fileneat',
 	'brand': 'fileneat',
 	//'port':80,//default http port(change for development) 
@@ -93,10 +93,10 @@ keystone.set('email locals', {
 
 keystone.set('email rules', [{
 	find: '/images/',
-	replace: (keystone.get('env') == 'production') ? 'http://www.your-server.com/images/' : 'http://localhost:3000/images/'
+	replace: (keystone.get('env') == 'production') ? 'http://www.fileneat.com/images/' : 'http://localhost:3000/images/'
 }, {
 	find: '/keystone/',
-	replace: (keystone.get('env') == 'production') ? 'http://www.your-server.com/keystone/' : 'http://localhost:3000/keystone/'
+	replace: (keystone.get('env') == 'production') ? 'http://www.fileneat.com/keystone/' : 'http://localhost:3000/keystone/'
 }]);
 
 // Load your project's email test routes
