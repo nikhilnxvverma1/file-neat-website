@@ -12,7 +12,7 @@ var i18n=require('i18n');
 // and documentation.
 
 keystone.init({
-	// 'env':'production',
+	'env':'production',
 	'name': 'fileneat',
 	'brand': 'fileneat',
 	//'port':80,//default http port(change for development) 

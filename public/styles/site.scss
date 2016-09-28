@@ -111,7 +111,7 @@ a.navbar-brand:hover{
 }
 
 //mobile
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 520px) {
   .active{
 	background: #2a95a0;
   }
@@ -257,6 +257,12 @@ $about-us-height:500px;
   text-align: center;
 }
 
+.download-button{
+  width:400px;
+  margin-top:15px;
+  margin-bottom:15px;
+}
+
 button.action-button{
   border:none;
 }
@@ -291,12 +297,6 @@ button.action-button{
   font-size: 2em;
   font-weight: 100;
   color: #919191;
-}
-
-.download-button{
-  width:400px;
-  margin-top:15px;
-  margin-bottom:15px;
 }
 
 .no-padding-left-right{
@@ -435,6 +435,7 @@ $facebook-color: #3B5998;
 $screen-sm-min: 768px;
 $screen-md-min: 992px;
 $screen-lg-max: 1200px;
+$screen-xxs-max: 320px;//this is the only thing not defined in _variable.scss
 $screen-md-max: ($screen-lg-max - 1); 
 $screen-sm-max: ($screen-md-min - 1);
 
@@ -449,7 +450,7 @@ $screen-sm-max: ($screen-md-min - 1);
     
  }
 
-//below medium (include small and extra small) 
+//below medium (includes small and extra small) 
  @media (max-width:$screen-md-min){
    #founder{
       width:100%; 
@@ -462,10 +463,15 @@ $screen-sm-max: ($screen-md-min - 1);
       }
    }   
 
+   .download-button{
+      width:90%;
+      padding-left: 6px;
+      padding-right: 6px;
+   }
  }
 
-//for extra small devices only
- @media (max-width:$screen-sm-min){
+//for extra small devices only (above xxs)
+ @media (min-width:$screen-xxs-max) and (max-width:$screen-xs-max){ //this is defined in bootstrap's _variable.scss 
    #founder{
       padding-left: 30px;
       padding-right: 30px;      
@@ -478,10 +484,40 @@ $screen-sm-max: ($screen-md-min - 1);
       #founder-profile{
         margin-bottom:20px;
       }
+      #founder-profile img{
+        margin-right:15px;
+      }
       #founder-profile div{
         position:relative;
         top:5px;
       }
+    }
+ }
+
+//for extra extra small (xxs). This is not a part of bootstrap's responsive media breakpoint
+ @media (min-width:$screen-xxs-max) and (max-width:$screen-xs-min){
+   #founder{
+      padding:15px;
+    
+      h2{
+        margin-bottom: 20px;
+      }
+      #founder-profile{
+        margin-bottom:20px;
+      }
+      #founder-profile img{
+        margin-right:10px;
+      }
+      #founder-profile div{
+        position:relative;
+        top:0px;
+      }
+    }
+
+    .download-button{
+      padding-left: 2px;
+      padding-right: 2px;
+      font-size: 1.7em;
     }
  }
 
@@ -490,5 +526,11 @@ $screen-sm-max: ($screen-md-min - 1);
    #founder{
      padding-left:70px;
      padding-right:70px;
+   }
+
+   .download-button{
+      width:60%;
+      padding-left: 10px;
+      padding-right: 10px;
    }
  }
